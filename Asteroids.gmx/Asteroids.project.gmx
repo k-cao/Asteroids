@@ -16,12 +16,17 @@
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_asteroid_small</sprite>
     <sprite>sprites\spr_deadplayer</sprite>
+    <sprite>sprites\spr_arrow</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_menu.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_large</font>
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_32</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -32,8 +37,14 @@
     <object>objects\obj_spawner</object>
     <object>objects\obj_deadplayer</object>
     <object>objects\obj_gameover</object>
+    <object>objects\obj_options</object>
+    <object>objects\obj_pause</object>
+    <object>objects\obj_instructions</object>
+    <object>objects\obj_escape</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_instructions</room>
     <room>rooms\rm_game</room>
   </rooms>
   <help>

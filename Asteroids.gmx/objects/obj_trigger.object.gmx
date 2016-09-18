@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,45 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Game Over
-global.gameover = 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw Text to Screen
+            <string>/// Check if room needs to be restarted
 
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-
-draw_set_font(fnt_large);
-draw_set_color(c_white);
-
-draw_text(room_width/2, room_height/2, "Game Over");
-
-
-draw_set_font(fnt_small);
-draw_text(room_width/2, room_height/2 + 50, "Press R to Restart");
-
-
+if(global.start)
+{
+    room_persistent = false;
+    room_restart();
+}
 </string>
           </argument>
         </arguments>
